@@ -1,0 +1,63 @@
+/* AG Grid Custom Styles */
+
+// Define variables (example values)
+$text-color: #333;
+$primary-color: #1890ff;
+$heading-color: #fff; // Adjusted for better contrast with primary color
+$item-hover-bg: #f5f5f5;
+$grid-border-color: #ddd;
+$cell-padding: 12px;
+
+// Grid container styling
+.ag-grid-container {
+  .ag-theme-alpine {
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid $grid-border-color; // Adding a border to the grid
+
+    // Cell styling
+    .ag-cell {
+      font-size: 14px;
+      color: $text-color;
+      padding: $cell-padding;
+      border-right: 1px solid $grid-border-color; // Adjusted border size
+
+      // Transition for hover effects
+      transition: background-color 0.3s ease;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    // Header cell styling
+    .ag-header-cell {
+      background-color: $primary-color;
+      color: $heading-color;
+      padding: $cell-padding;
+      border-bottom: 1px solid darken($primary-color, 10%); // Adjusted border size
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+
+      // Header hover effect
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
+
+    // Row hover styling
+    .ag-row-hover {
+      background-color: $item-hover-bg;
+
+      // Ensuring cells also transition on row hover
+      .ag-cell {
+        background-color: $item-hover-bg;
+      }
+    }
+
+    // Alternating row background for better readability
+    .ag-row:nth-child(even) {
+      background-color: lighten($item-hover-bg, 3%);
+    }
+  }
+}

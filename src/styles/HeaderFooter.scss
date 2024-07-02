@@ -1,0 +1,41 @@
+/* Header Styles */
+.app-header {
+    font-size: 17px;
+    text-align: left;
+    padding: 13px 20px ;
+    background-color: #000; // Black background
+    color: #fff; // White text
+    margin-bottom: 3px;
+  }
+  
+  /* Footer Styles */
+  .footer-container {
+    text-align: center;
+    padding: 13px 0;
+    font-size: 14px;
+    background-color: #000; // Black background
+    color: #fff; // White text
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+ 
+.ant-menu-dark.ant-menu-horizontal {
+  background-color: #1890ff; //  background color of the menu bar
+  border-bottom: none; // Removes the default border
+  margin: 3px;
+
+  .ant-menu-item {
+    color: #fff; // text color for menu items
+  }
+
+  .ant-menu-item:hover {
+    color: #1890ff; // Text color when hovering over a menu item
+  }
+
+  .ant-menu-item-selected {
+    background-color: #1890ff; // Background color of the selected item
+    color: #fff; // Text color of the selected item
+  }
+}
